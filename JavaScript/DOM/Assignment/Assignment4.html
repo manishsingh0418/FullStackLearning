@@ -1,6 +1,7 @@
-<!-- Fetching the first todo list  -->
+<!-- Update the first todo’s contents -->
 
-  <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -19,10 +20,7 @@
     <button>Add Todo</button>
   </div>
   <script >
-      const input1 = document.querySelector('H4');
-      var value1 = input1.innerHTML;
-      console.log(value1)
+      const input1 = document.querySelectorAll('H4')[1];
+      input1.innerHTML="Go to library";
   </script>
 </body>
-
-</html>
