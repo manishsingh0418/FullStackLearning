@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" >
+    <button onclick="addtodo()">Add Todo</button>
+</body>
+<script>
+    let ctr=1;
+     function addtodo(){
+        var input =document.querySelector("input");
+        var value = input.value;
+
+        const newDivElement = document.createElement("div");
+        newDivElement.setAttribute("id",ctr);
+        
+        newDivElement.innerHTML = "<div>"+value+'</div><button onclick="deletetodo(' + ctr + ')">Delete</button>';
+        ctr++;
+        document.querySelector("body").appendChild(newDivElement);
+
+    }
+    function deletetodo(index){
+        const element = document.getElementById(index);
+         element.parentNode.removeChild(element);
+    }
+</script>
+</html>
